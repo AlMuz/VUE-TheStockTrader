@@ -1,11 +1,14 @@
 <template>
-  <div class="container">
+  <div>
+    <h1>
+      The Portfolio - Stock component
+    </h1>
   </div>
 </template>
 
 <script>
   export default {
-    
+
   }
 </script>
 
