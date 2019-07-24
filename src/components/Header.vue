@@ -72,9 +72,12 @@
           stocks: this.$store.getters.stocks
         };
 
-        this.$http.put('data.json', data);
+        this.isDropdownOpen = false;
+        this.$http.put('data.json', data)
+          .then(response => alert('Data saved!'));
       },
       loadData() {
+        this.isDropdownOpen = false;
         this.fetchData();
       }
     }
