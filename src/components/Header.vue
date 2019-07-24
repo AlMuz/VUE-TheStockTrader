@@ -58,9 +58,10 @@
       }
     },
     methods: {
-      ...mapActions([
-        'randomizeStocks'
-      ]),
+      ...mapActions({
+        randomizeStocks:'randomizeStocks',
+        fetchData: 'loadData'
+      }),
       endDay() {
         this.randomizeStocks();
       },
@@ -70,11 +71,11 @@
           stockPortfolio: this.$store.getters.stockPortfolio,
           stocks: this.$store.getters.stocks
         };
-        
+
         this.$http.put('data.json', data);
       },
       loadData() {
-
+        this.fetchData();
       }
     }
   }
